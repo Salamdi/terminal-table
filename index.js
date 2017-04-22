@@ -1,4 +1,3 @@
-const start = new Date().getTime();
 const fs = require('fs');
 const Table = require('./Table');
 
@@ -14,6 +13,7 @@ const getSource = new Promise((resolve, reject) => {
 getSource.then(data => {
     const table = new Table(data);
     table.draw();
-    const end = new Date().getTime();
-    console.log(`${end} - ${start} = ${end - start}`)
+    console.log('\n');
 });
+
+console.log('\n');
